@@ -19,6 +19,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    z-index: -1;
 }
 
 .portada::after {
@@ -184,7 +186,8 @@ h2 {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
+    position: relative;
+    z-index: -1;
 
 }
 
