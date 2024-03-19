@@ -508,8 +508,8 @@ h2 {
 
 .imagen_position img {
     display: block;
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 100vh;
     border-radius: 15px;
 }
 
