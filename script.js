@@ -151,3 +151,28 @@ document.getElementById('form').addEventListener('submit', function(event) {
             btn.value = 'Send Email'; // Restaurar el valor del botón después del envío
         });
 });
+
+window.addEventListener('scroll', function () {
+    var scrollPosition = window.scrollY;
+
+    // Obtener todas las secciones de la página
+    var sections = document.querySelectorAll('section');
+
+    sections.forEach(function (section) {
+        var sectionTop = section.offsetTop;
+        var sectionHeight = section.clientHeight;
+
+        if (scrollPosition >= sectionTop && scrollPosition < (sectionTop + sectionHeight)) {
+            // Remover la clase 'active' de todos los enlaces del navbar
+            document.querySelectorAll('.navbar-nav .nav-link').forEach(function (link) {
+                link.classList.remove('active');
+            });
+
+            // Agregar la clase 'active' al enlace correspondiente
+            var sectionId = section.getAttribute('id');
+            var correspondingLink = document.querySelector('.navbar-nav .nav-link[href="#' + sectionId + '"]');
+            correspondingLink.classList.add('active');
+        }
+    });
+});
+

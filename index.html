@@ -31,10 +31,36 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://unpkg.com/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bellota:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Carrois+Gothic+SC&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <section class="portada">
+    <section class="portada" id="portada">
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container-fluid">
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse " id="navbarNavAltMarkup" style="color: white;">
+                    <div class="navbar-nav ms-auto" style="color: white;">
+                        <a class="nav-item nav-link active" href="#portada">Home</a>
+                        <a class="nav-item nav-link" href="#aboutme">About Me</a>
+                        <a class="nav-item nav-link" href="#skills">Skills</a>
+                        <a class="nav-item nav-link" href="#projects">Projects</a>
+                        <a class="nav-item nav-link" href="#contact">Contact </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
         <div class="portada_info">
             <h2 class="animate__animated animate__bounceInLeft">HI, MY NAME IS</h2>
             <h1><span class="red-text">NINO&nbsp</span> BARRIOS</h1>
@@ -43,7 +69,7 @@
         </div>
     </section>
 
-    <section class="aboutme">
+    <section class="aboutme" id="aboutme">
         <h1 class="animate__animated animate__fadeInRight">About Me</h1>
         <div class="aboutme_container ">
             <p class="animate__animated animate__fadeInLeft">I'm Nino Barrios, I'm a Systems Engineer,
@@ -63,7 +89,7 @@
         </div>
     </section>
 
-    <section class="skills">
+    <section class="skills" id="skills">
         <h1 class="animate__animated animate__fadeInLeftBig">My Skills</h1>
 
         <div class="slider">
@@ -124,8 +150,8 @@
         </div>
         <div class="skills-info ">
             <div class="skills-container ">
-                <div class="card-container animate__animated animate__fadeInLeft uno">
-                    <div class="card">
+                <div class="cardbox animate__animated animate__fadeInLeft uno">
+                    <div class="cartas">
                         <div class="card-front">
                             <p class="card-text">
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/590px-Node.js_logo.svg.png"
@@ -145,8 +171,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="card-container animate__animated animate__fadeInLeft dos">
-                    <div class="card">
+                <div class="cardbox animate__animated animate__fadeInLeft dos">
+                    <div class="cartas">
                         <div class="card-front">
                             <p class="card-text">
                                 <img src="https://cdn.icon-icons.com/icons2/2699/PNG/512/vuejs_logo_icon_169247.png"
@@ -162,8 +188,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="card-container animate__animated animate__fadeInLeft tres">
-                    <div class="card">
+                <div class="cardbox animate__animated animate__fadeInLeft tres">
+                    <div class="cartas">
                         <div class="card-front">
                             <p class="card-text"> <img
                                     src="https://logos-world.net/wp-content/uploads/2023/08/React-Symbol.png" alt="">
@@ -179,8 +205,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="card-container animate__animated animate__fadeInLeft cuatro">
-                    <div class="card">
+                <div class="cardbox animate__animated animate__fadeInLeft cuatro">
+                    <div class="cartas">
                         <div class="card-front">
                             <p class="card-text"> <img
                                     src="https://i.pinimg.com/originals/1d/78/36/1d7836b162169e9836b6761253132a81.png"
@@ -197,8 +223,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="card-container animate__animated animate__fadeInLeft cinco">
-                    <div class="card">
+                <div class="cardbox animate__animated animate__fadeInLeft cinco">
+                    <div class="cartas">
                         <div class="card-front">
                             <p class="card-text"> <img
                                     src="https://1000marcas.net/wp-content/uploads/2021/06/Django-Logo.png" alt="">
@@ -214,8 +240,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="card-container animate__animated animate__fadeInLeft seis">
-                    <div class="card">
+                <div class="cardbox animate__animated animate__fadeInLeft seis">
+                    <div class="cartas">
                         <div class="card-front">
                             <p class="card-text"> <img
                                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/1200px-Git-logo.svg.png"
@@ -223,13 +249,17 @@
                         </div>
                         <div class="card-back">
                             <p class="card-text">
-                                git
+                                Collaborative work<br>
+                                Version control<br>
+                                Backup and restore<br>
+                                Advanced commands<br>
+                                Workflow
                             </p>
                         </div>
                     </div>
                 </div>
-                <div class="card-container animate__animated animate__fadeInLeft siete">
-                    <div class="card">
+                <div class="cardbox animate__animated animate__fadeInLeft siete">
+                    <div class="cartas">
                         <div class="card-front">
                             <p class="card-text"> <img
                                     src="https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png"
@@ -245,8 +275,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="card-container animate__animated animate__fadeInLeft ocho">
-                    <div class="card">
+                <div class="cardbox animate__animated animate__fadeInLeft ocho">
+                    <div class="cartas">
                         <div class="card-front">
                             <p class="card-text">
                                 <img src="https://www.pngall.com/wp-content/uploads/13/Figma-Logo-PNG-Photos.png"
@@ -271,7 +301,7 @@
 
 
     </section>
-    <section class="projects">
+    <section class="projects" id="projects">
         <div class="center">
             <h1 class="animate__animated animate__backInDown">Projects</h1>
             <img class="animate__animated animate__fadeIn" src="/Imagenes/flecha.png" alt="" title="Github">
@@ -279,8 +309,7 @@
         <div class="project1">
             <div class="projects_left">
                 <div class="imagen_position">
-                    <img class="uno"
-                        src="/Imagenes/Pronosticosimg.JPG">
+                    <img class="uno" src="/Imagenes/Pronosticosimg.JPG">
                     <div class="tecnologias">
                         <div class="tec_used">React</div>
                         <div class="tec_used">Nodejs</div>
@@ -315,8 +344,7 @@
         <div class="project2">
             <div class="projects_left">
                 <div class="imagen_position">
-                    <img class="dos"
-                        src="/Imagenes/diseño.JPG">
+                    <img class="dos" src="/Imagenes/diseño.JPG">
                     <div class="tecnologias">
                         <div class="tec_used">Django</div>
                         <div class="tec_used">Model VC</div>
@@ -344,8 +372,7 @@
         <div class="project3">
             <div class="projects_left">
                 <div class="imagen_position">
-                    <img class="tres" style="height: 400px;"
-                        src="/Imagenes/vsc.jpg">
+                    <img class="tres" style="height: 400px;" src="/Imagenes/vsc.jpg">
                     <div class="tecnologias">
                         <div class="tec_used">VSC Extension</div>
                         <div class="tec_used">Themes</div>
@@ -447,16 +474,12 @@
             </div>
         </div>
     </section>
-    <div class="division"></div>
-    <section class="contact">
+    <section class="contact" id="contact">
         <div class="fondo">
 
         </div>
         <div class="contact_info">
             <h1 class="animate__animated animate__fadeInLeftBig">Contact Me</h1>
-
-
-
             <div class="button-container">
                 <form id="form">
                     <div class="field">
@@ -498,7 +521,8 @@
             <a href="https://github.com/ninobarrios"> <img src="/Imagenes/github.png" alt="" title="Github"></a>
             <a href='mailto:nino.barrios@ucsm.edu.pe'> <img src="/Imagenes/email.png" alt="" title="Correo"></a>
             <a href="https://wa.me/51965750922"><img src="/Imagenes/whatsapp.png" alt="" title="WhatsApp"></a>
-            <a href="https://www.linkedin.com/in/nino-barrios-114365183/"><img src="/Imagenes/linkedin.png" alt="" title="Linkedin"></a>
+            <a href="https://www.linkedin.com/in/nino-barrios-114365183/"><img src="/Imagenes/linkedin.png" alt=""
+                    title="Linkedin"></a>
         </div>
 
     </section>
@@ -508,7 +532,8 @@
             <a href="https://github.com/ninobarrios"> <img src="/Imagenes/github.png" alt="" title="Github"></a>
             <a href='mailto:nino.barrios@ucsm.edu.pe'> <img src="/Imagenes/email.png" alt="" title="Correo"></a>
             <a href="https://wa.me/51965750922"><img src="/Imagenes/whatsapp.png" alt="" title="WhatsApp"></a>
-            <a href="https://www.linkedin.com/in/nino-barrios-114365183/"><img src="/Imagenes/linkedin.png" alt="" title="Linkedin"></a>
+            <a href="https://www.linkedin.com/in/nino-barrios-114365183/"><img src="/Imagenes/linkedin.png" alt=""
+                    title="Linkedin"></a>
         </div>
         <div class="name_footer">
             ©Nino Barrios
