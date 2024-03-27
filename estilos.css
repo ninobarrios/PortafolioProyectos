@@ -1345,6 +1345,25 @@ input[type="submit"] {
         display: flex;
         justify-content: flex-end !important;
     }
+
+    .portada_info h2 {
+        font-size: 10vw;
+        margin-bottom: 0px;
+    }
+
+    .portada_info h1 {
+        font-size: 15vw;
+        margin-bottom: 0px;
+
+    }
+
+    .portada_info h3 {
+        font-size: 5vw;
+    }
+
+    .portada_info button {
+        font-size: 4vw;
+    }
 }
 
 .navbar {
