@@ -153,7 +153,8 @@ h3 {
 
 .portada_info button:hover {
     transform: scale(1.2);
-    box-shadow: 0 0 25px 5px #00FFFF; /* Añade espacio después de 5px */
+    box-shadow: 0 0 25px 5px #00FFFF;
+    /* Añade espacio después de 5px */
 }
 
 
@@ -247,7 +248,6 @@ h2 {
 .skills {
     background-color: #060608;
     height: auto;
-    position: relative;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -340,8 +340,7 @@ h2 {
     font-weight: bold;
     font-size: 4vw;
     flex-direction: column;
-    position: relative;
-    z-index: 900;
+
 }
 
 
@@ -353,8 +352,7 @@ h2 {
     font-family: "Bellota", system-ui;
     font-weight: bold;
     text-align: center;
-    position: relative;
-    z-index: 910;
+
     margin-bottom: 50px;
 }
 
@@ -363,8 +361,7 @@ h2 {
     width: auto;
     margin-top: 25px;
     filter: drop-shadow(0px 5px 10px rgb(0, 255, 255));
-    position: relative;
-    z-index: 901;
+
 }
 
 
@@ -475,7 +472,7 @@ h2 {
     justify-content: center;
     align-items: center;
     position: relative;
-    z-index: 902;
+    z-index: 1;
     flex-wrap: wrap;
     margin: 100px 0px;
 }
@@ -503,8 +500,8 @@ h2 {
     display: inline-block;
     position: relative;
     overflow: hidden;
-    max-width: 50vw; 
-    max-height: 50vh; 
+    max-width: 50vw;
+    max-height: 50vh;
     border-radius: 15px;
     display: flex;
     align-items: center;
@@ -514,9 +511,9 @@ h2 {
 .imagen_position img {
     display: block;
     width: auto;
-    height: 100%; /* Establece la altura al 100% para que la imagen llene el contenedor verticalmente */
+    height: 300px;
     border-radius: 15px;
-    transition: transform 0.3s ease; /* Agrega una transición para suavizar el efecto de zoom */
+    transition: transform 0.3s ease;
 }
 
 .imagen_position:hover img {
@@ -583,8 +580,11 @@ h2 {
     flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
-
+    position: relative;
+    z-index: -1; /* Cambiado a un valor negativo */
 }
+
+
 
 .projects_right_title {
     font-size: 2.5vw;
@@ -606,6 +606,7 @@ h2 {
     justify-content: center;
     align-items: center;
     width: 60%;
+
 }
 
 .vermas {
@@ -622,6 +623,8 @@ h2 {
     font-family: "Kanit", sans-serif;
     font-weight: bold;
     color: black;
+    position: relative;
+    z-index: -1;
 }
 
 .vermas p {
@@ -631,7 +634,7 @@ h2 {
     font-size: 20px;
     text-transform: uppercase;
     text-decoration: none;
-    margin-bottom:0px ;
+    margin-bottom: 0px;
 }
 
 .flecha {
@@ -742,7 +745,7 @@ h2 {
 .fondo::before {
     content: "";
     position: absolute;
-    top: 0;
+    top: -10;
     left: 0;
     width: 100%;
     height: 400px;
@@ -1153,9 +1156,7 @@ input[type="submit"] {
         align-content: flex-start;
     }
 
-    .tecnologias {
-        flex-wrap: wrap;
-    }
+
 
     .division {
         height: 0px;
@@ -1166,11 +1167,19 @@ input[type="submit"] {
         height: auto;
     }
 
+    form {
+        width: 70vw;
+    }
+
 }
 
 @media (max-width: 600px) {
     .aboutme {
         width: 100%;
+    }
+
+    .fondo::before {
+        background: linear-gradient(to bottom, #19344f, #1f313b00);
     }
 
     .skills h1 {
@@ -1186,7 +1195,7 @@ input[type="submit"] {
     }
 
     .aboutme_container p {
-        font-size: 1.5rem;
+        font-size: 1rem;
         width: 100%;
     }
 
@@ -1196,27 +1205,13 @@ input[type="submit"] {
         justify-content: center;
     }
 
-    .projects_left {
-        width: 100%;
-        height: 20vh;
-        align-content: center;
-        justify-content: center;
-    }
-
-    .imagen_position {
-        width: 600px;
-        height: 100%;
-    }
-
-    .imagen_position img {
-        width: 500px;
-        height: auto;
-    }
 
     .projects_left {
         display: flex;
         align-items: center;
         justify-content: center;
+        height: 50vh;
+        width: 50vw;
     }
 
     .projects_right {
@@ -1256,16 +1251,49 @@ input[type="submit"] {
         align-items: center;
         justify-content: center;
     }
-    .contact_info h1{
+
+    .contact_info h1 {
         font-size: 3rem;
     }
 
+    .skills-container {
+        width: 100%;
+    }
+
+    form {
+        width: 90vw;
+        padding: 0px;
+    }
+
+    .project_tool h4 {
+        text-align: center;
+    }
+
+    .project_tool p {
+        width: 90%;
+    }
+
+    .footer {
+        text-align: center;
+        background-color: yellowgreen;
+        height: 40vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl{
+        display: flex;
+        justify-content: flex-end !important;
+    }
 }
+
 .navbar {
     backdrop-filter: blur(2.5px);
     color: white;
     position: absolute;
     z-index: 999;
+
 }
 
 .navbar-brand {
@@ -1286,12 +1314,14 @@ input[type="submit"] {
     position: relative;
     z-index: 999;
 }
-.nav-item{
+
+.nav-item {
     color: white !important;
     font-family: "Carrois Gothic SC", sans-serif;
     position: relative;
     z-index: 999;
 }
+
 .navbar-nav .nav-link.active {
     color: #00FFFF !important;
     position: relative;
