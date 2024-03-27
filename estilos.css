@@ -205,14 +205,13 @@ h2 {
     font-family: "Bellota", system-ui;
     color: #ffffff;
     margin: 0px;
-    font-size: 1vw;
+    font-size: 1.5vw;
 }
 
 .aboutme_container {
     background-color: rgba(255, 255, 255, 0.021);
     height: auto;
-    width: 30vw;
-    font-size: 1vw;
+    margin: 0vh 20vw;
     padding: 25px;
     text-align: justify;
     backdrop-filter: blur(1px);
@@ -221,6 +220,10 @@ h2 {
     align-items: center;
     justify-content: center;
     margin-top: 3vh;
+}
+
+.aboutme_container p {
+    font-size: 1.5vw;
 }
 
 .redes_sociales {
@@ -581,7 +584,8 @@ h2 {
     justify-content: center;
     flex-wrap: wrap;
     position: relative;
-    z-index: -1; /* Cambiado a un valor negativo */
+    z-index: -1;
+    /* Cambiado a un valor negativo */
 }
 
 
@@ -1119,6 +1123,10 @@ input[type="submit"] {
 
 
 @media (max-width: 1024px) {
+    .center h1 {
+        font-size: 8vw;
+        margin-bottom: 0px;
+    }
 
     .project1,
     .project2,
@@ -1126,6 +1134,10 @@ input[type="submit"] {
     .project4 {
         flex-direction: column;
         margin: 30px 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
     }
 
     .vermas {
@@ -1144,6 +1156,15 @@ input[type="submit"] {
         margin-left: 0px;
     }
 
+    .projects_right_title {
+        font-size: 5vw;
+    }
+
+    .projects_right_text {
+        font-size: 2vw;
+        width: 100%;
+    }
+
     .container_tools {
         flex-direction: column;
     }
@@ -1153,10 +1174,25 @@ input[type="submit"] {
     }
 
     .projects_left {
-        align-content: flex-start;
+        align-content: center;
+        width: auto;
+        height: auto;
+
+    }
+
+    .projects_right {
+        align-content: center;
+        align-items: center;
+        text-align: center;
     }
 
 
+
+    .imagen_position img {
+        height: 2050px;
+        width: 1200%;
+
+    }
 
     .division {
         height: 0px;
@@ -1174,6 +1210,23 @@ input[type="submit"] {
 }
 
 @media (max-width: 600px) {
+    .imagen_position img {
+        height: 200px;
+        width: 400px;
+    }
+
+    .tecnologias {
+        margin: 3px;
+        padding: 0px 3px;
+        font-size: 11px;
+    }
+
+    .tec_used {
+        margin: 3px;
+        padding: 0px 5px;
+    }
+
+
     .aboutme {
         width: 100%;
     }
@@ -1210,7 +1263,7 @@ input[type="submit"] {
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 50vh;
+        height: auto;
         width: 50vw;
     }
 
@@ -1282,7 +1335,13 @@ input[type="submit"] {
         justify-content: center;
     }
 
-    .navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl{
+    .navbar>.container,
+    .navbar>.container-fluid,
+    .navbar>.container-lg,
+    .navbar>.container-md,
+    .navbar>.container-sm,
+    .navbar>.container-xl,
+    .navbar>.container-xxl {
         display: flex;
         justify-content: flex-end !important;
     }
