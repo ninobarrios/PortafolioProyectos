@@ -196,8 +196,8 @@ h2 {
 .aboutme h1 {
     font-size: 4vw;
     color: #00FFFF;
-    text-shadow: 0px 1px 50px rgba(0, 255, 255, 1);
-    font-family: "Bellota", system-ui;
+    text-shadow: 0px 1px 5px rgb(0, 255, 255);
+    font-family: "Roboto", sans-serif;
     font-weight: bold;
 }
 
@@ -260,8 +260,8 @@ h2 {
 .skills h1 {
     font-size: 4vw;
     color: #00FFFF;
-    text-shadow: 0px 1px 50px rgba(0, 255, 255, 1);
-    font-family: "Bellota", system-ui;
+    text-shadow: 0px 1px 5px rgb(0, 255, 255);
+    font-family: "Roboto", sans-serif;
     font-weight: bold;
     display: flex;
     justify-content: flex-end;
@@ -349,10 +349,11 @@ h2 {
 
 
 .center h1 {
-    font-size: 4vw;
     color: #00FFFF;
-    text-shadow: 0px 1px 50px rgb(0, 255, 255);
-    font-family: "Bellota", system-ui;
+    text-shadow: 0px 1px 5px rgb(0, 255, 255);
+    font-family: "Roboto", sans-serif;
+    font-size: 4vw;
+
     font-weight: bold;
     text-align: center;
 
@@ -767,10 +768,11 @@ h2 {
 }
 
 .contact_info h1 {
-    font-size: 4vw;
     color: #00FFFF;
-    text-shadow: 0px 1px 50px rgb(0, 255, 255);
-    font-family: "Bellota", system-ui;
+    text-shadow: 0px 1px 5px rgb(0, 255, 255);
+    font-family: "Roboto", sans-serif;
+    font-size: 4vw;
+
     font-weight: bold;
     text-align: center;
     position: relative;
@@ -841,7 +843,6 @@ form {
     z-index: 907;
     backdrop-filter: blur(2px);
     align-items: center;
-    width: 20vw;
 }
 
 
@@ -954,12 +955,13 @@ textarea:focus {
     font-size: 17px;
     background-color: #00ffff15;
     border-radius: 5px;
-    border: 2px solid #00ffff2a;
+    border: 1px solid #00ffff2a;
     height: 25px;
     color: white;
     margin: 0px;
-    font-weight: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 30px;
+    width: 90%;
 }
 
 .field textarea {
