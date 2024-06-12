@@ -22,6 +22,10 @@
         rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Text:ital,wght@0,400..800;1,400..800&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Moul&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,6 +46,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Wix+Madefor+Text:ital,wght@0,400..800;1,400..800&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Text:ital,wght@0,400..800;1,400..800&display=swap"
         rel="stylesheet">
 </head>
 
@@ -66,37 +79,74 @@
                 </div>
             </div>
         </nav>
-
-        <div class="portada_info">
-            <h2 class="animate__animated animate__bounceInLeft">HI, MY NAME IS</h2>
-            <h1><span class="red-text">NINO&nbsp</span> BARRIOS</h1>
-            <h3 class="animate__animated animate__fadeInUp">Web Developer and Designer</h3>
-            <button class="animate__animated animate__fadeInUpBig tec_used_home">Send me a message</button>
+        <div class="portada_content">
+            <div class="portada_info">
+                <h2 class="label1">WEB DEVELOPER AND DESIGNER</h2>
+                <h1 class="label2">NINO BARRIOS<br> BELLIDO</h1>
+                <button class="contact-btn"
+                    onclick="document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' });">Send me a
+                    message</button>
+            </div>
         </div>
+
+
+
     </section>
 
     <section class="aboutme" id="aboutme">
-        <h1 class="animate__animated animate__fadeInRight">About Me</h1>
-        <div class="aboutme_container ">
-            <p class="animate__animated animate__fadeInLeft">I'm Nino Barrios, I'm a Systems Engineer,
-                I'm in charge of designing and implementing
-                various types of web pages, with different types
-                of Marcos to ensure efficiency
-                of the final product that is created.<br><br>
-                I like to work as a team on projects that
-                demand it, and I also usually build web pages
-                starting from scratch, from the analysis of
-                requirements, design, functionalities, user
-                experience, to delivering a final product
-                that meets expectations, and generating
-                an improvement. continue using the product.
-            </p>
+        <div class="abutmetitulo" id="aboutme">About Me</div>
+        <div class="aboutmecontent">
+            I'm Nino Barrios, I'm a Systems Engineer, I'm in charge of designing and implementing various types of web
+            pages, with different types of Marcos to ensure efficiency of the final product that is created.
+
+            I like to work as a team on projects that demand it, and I also usually build web pages starting from
+            scratch, from the analysis of requirements, design, functionalities, user experience, to delivering a final
+            product that meets expectations, and generating an improvement. continue using the product.
+        </div>
+
+    </section>
+    <div class="imagenesaboutme">
+        <div class="aboutmetop">
+            <div class="imagen aboutmeuno">
+                <h3>DISEÑO</h3>
+            </div>
+            <div class="imagen aboutmedos">
+                <h3>CODIFICACIÓN</h3>
+            </div>
+            <div class="imagen aboutmetres">
+                <h3>MANTENIMIENTO</h3>
+            </div>
 
         </div>
-    </section>
-
+        <div class="aboutmebottom"></div>
+    </div>
     <section class="skills" id="skills">
-        <h1 class="animate__animated animate__fadeInLeftBig">My Skills</h1>
+        <div class="frontendskills">
+            <div class="frontendskillsleft">
+                <h2>Front End Skills</h2>
+                <h3>I am a frontend developer passionate about creating intuitive and engaging user interfaces that improve user experience in web applications. My skills and experience include 
+                </h3>
+            </div>
+            <div class="frontendskillsright">
+                <div class="frontendskillsrightbox">
+                    <h4>HTML/CSS</h4>
+                    <p>Expert in structuring web content with HTML5 and styling with CSS3, including Flexbox and Grid, as well as creating responsive and accessible layouts.</p>
+                </div>
+                <div class="frontendskillsrightbox">
+                    <h4>JavaScript</h4>
+                    <p>Proficient in developing interactivity and dynamic functionality in websites, advanced handling of ES6+, DOM manipulation, browser APIs, AJAX and fetch for asynchronous communication.</p>
+                </div>
+                <div class="frontendskillsrightbox">
+                    <h4>Frameworks/Libraries</h4>
+                    <p>Expert in leveraging React to create dynamic user interfaces characterized by the implementation of reusable components and modular design principles.</p>
+                </div>
+                <div class="frontendskillsrightbox">
+                    <h4>Responsive Design</h4>
+                    <p>Adaptive and responsive design, use of frameworks to ensure compatibility on multiple devices and optimization of interfaces for an excellent user experience.</p>
+                </div>
+            </div>
+        </div>
+
 
         <div class="slider">
             <div class="slide-track">
@@ -153,337 +203,170 @@
                     <img src="https://www.pngall.com/wp-content/uploads/13/Figma-Logo-PNG-Photos.png" alt="">
                 </div>
             </div>
+
         </div>
-        <div class="skills-info ">
-            <div class="skills-container ">
-                <div class="cardbox animate__animated animate__fadeInLeft uno">
-                    <div class="cartas">
-                        <div class="card-front">
-                            <p class="card-text">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/590px-Node.js_logo.svg.png"
-                                    </p>
-                        </div>
-                        <div class="card-back">
-                            <p class="card-text">
-
-                                Express.js<br>
-                                REST API<br>
-                                File<br>
-                                Management<br>
-                                Database<br>
-                                Security<br>
-                                Testing<br>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="cardbox animate__animated animate__fadeInLeft dos">
-                    <div class="cartas">
-                        <div class="card-front">
-                            <p class="card-text">
-                                <img src="https://cdn.icon-icons.com/icons2/2699/PNG/512/vuejs_logo_icon_169247.png"
-                                    alt="">
-                            </p>
-                        </div>
-                        <div class="card-back">
-                            <p class="card-text">
-                                Vue Templates and Directives<br>
-                                Vue Router<br>
-                                Event Management<br>
-                                Testing<br> </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="cardbox animate__animated animate__fadeInLeft tres">
-                    <div class="cartas">
-                        <div class="card-front">
-                            <p class="card-text"> <img
-                                    src="https://logos-world.net/wp-content/uploads/2023/08/React-Symbol.png" alt="">
-                            </p>
-                        </div>
-                        <div class="card-back">
-                            <p class="card-text">
-                                JavaScript ES6<br>
-                                JSX (JavascriptHTML)<br>
-                                Component Life Cycle<br>
-                                React Router
-                                Testing<br> </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="cardbox animate__animated animate__fadeInLeft cuatro">
-                    <div class="cartas">
-                        <div class="card-front">
-                            <p class="card-text"> <img
-                                    src="https://i.pinimg.com/originals/1d/78/36/1d7836b162169e9836b6761253132a81.png"
-                                    alt="">
-                            </p>
-                        </div>
-                        <div class="card-back">
-                            <p class="card-text">
-                                TypeScript<br>
-                                Dependency Injection<br>
-                                Routing<br>
-                                Testing <br>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="cardbox animate__animated animate__fadeInLeft cinco">
-                    <div class="cartas">
-                        <div class="card-front">
-                            <p class="card-text"> <img
-                                    src="https://1000marcas.net/wp-content/uploads/2021/06/Django-Logo.png" alt="">
-                            </p>
-                        </div>
-                        <div class="card-back">
-                            <p class="card-text">
-                                Django MVC Framework<br>
-                                Routes and views<br>
-                                Templates<br>
-                                Testing<br>
-                                Security <br> </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="cardbox animate__animated animate__fadeInLeft seis">
-                    <div class="cartas">
-                        <div class="card-front">
-                            <p class="card-text"> <img
-                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/1200px-Git-logo.svg.png"
-                                    </p>
-                        </div>
-                        <div class="card-back">
-                            <p class="card-text">
-                                Collaborative work<br>
-                                Version control<br>
-                                Backup and restore<br>
-                                Advanced commands<br>
-                                Workflow
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="cardbox animate__animated animate__fadeInLeft siete">
-                    <div class="cartas">
-                        <div class="card-front">
-                            <p class="card-text"> <img
-                                    src="https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png"
-                                    </p>
-                        </div>
-                        <div class="card-back">
-                            <p class="card-text">
-                                DB Design<br>
-                                SQL Commands<br>
-                                Indexes and Optimization<br>
-                                Views<br>
-                                Stored Procedures and Triggers<br> </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="cardbox animate__animated animate__fadeInLeft ocho">
-                    <div class="cartas">
-                        <div class="card-front">
-                            <p class="card-text">
-                                <img src="https://www.pngall.com/wp-content/uploads/13/Figma-Logo-PNG-Photos.png"
-                                    alt="">
-
-
-                            </p>
-                        </div>
-                        <div class="card-back">
-                            <p class="card-text">
-                                Design<br>
-                                Prototyping<br>
-                                Responsive Design<br>
-                                Style Management<br>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-
-    </section>
-    <section class="projects" id="projects">
-        <div class="center">
-            <h1 class="animate__animated animate__backInDown">Projects</h1>
-            <img class="animate__animated animate__fadeIn" src="/Imagenes/flecha.png" alt="" title="Github">
-        </div>
-        <div class="project1">
-            <div class="projects_left">
-                <div class="imagen_position">
-                    <img class="uno" src="/Imagenes/Pronosticosimg.JPG">
-                    <div class="tecnologias">
-                        <div class="tec_used">React</div>
-                        <div class="tec_used">Nodejs</div>
-                        <div class="tec_used">MySql</div>
-                        <div class="tec_used">Express</div>
-                        <div class="tec_used">APIs</div>
-                        <div class="tec_used">React Router DOM</div>
-
-                    </div>
-                </div>
-
-            </div>
-            <div class="projects_right">
-                <div class="projects_right_title animate__animated  animate__fadeInRight">
-                    Sports <br>
-                    Statistics
-                </div>
-                <div class="projects_right_text animate__animated animate__fadeIn">
-                    Application of sports analysis of the Peruvian League 1 from 2018 to 2023, information on
-                    matches and probabilities of results, variety of results and comparison of performance between
-                    teams
-                </div>
-                <a class="vermas animate__animated animate__backInUp"
-                    href="https://ninobarrios.github.io/Analisis_Deportivo/">
-                    <p>See More</p>
-                    <div class="flecha">
-                        <img src="/Imagenes/flecha-correcta.png" alt="" title="Github">
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="project2">
-            <div class="projects_left">
-                <div class="imagen_position">
-                    <img class="dos" src="/Imagenes/diseño.JPG">
-                    <div class="tecnologias">
-                        <div class="tec_used">Django</div>
-                        <div class="tec_used">Model VC</div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="projects_right">
-                <div class="projects_right_title animate__animated  animate__fadeInRight">
-                    Design<br>
-                    Kit
-                </div>
-                <div class="projects_right_text animate__animated animate__fadeIn">
-                    Program created in Django with functions to improve the quality of an image, remove the
-                    background from images and create color palettes using the images we want as input.
-                </div>
-                <a class="vermas animate__animated animate__backInUp" href="https://github.com/ninobarrios/Kitdise-o">
-                    <p>See More</p>
-                    <div class="flecha">
-                        <img src="/Imagenes/flecha-correcta.png" alt="" title="Github">
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="project3">
-            <div class="projects_left">
-                <div class="imagen_position">
-                    <img class="tres" src="/Imagenes/vsc.jpg">
-                    <div class="tecnologias">
-                        <div class="tec_used">VSC Extension</div>
-                        <div class="tec_used">Themes</div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="projects_right">
-                <div class="projects_right_title animate__animated  animate__fadeInRight">
-                    Dynamic Theme For <br>
-                    Visual Studio Code
-                </div>
-                <div class="projects_right_text animate__animated animate__fadeIn">
-                    Visual Studio Code theme extension, with contrast for labels, comments, variables and many more
-                    for better observation when spending long hours programming
-                </div>
-                <a class="vermas animate__animated animate__backInUp"
-                    href="https://marketplace.visualstudio.com/items?itemName=tema-dinamico.theme-extensions&ssr=false#overview">
-                    <p>See More</p>
-                    <div class="flecha">
-                        <img src="/Imagenes/flecha-correcta.png" alt="" title="Github">
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="project4">
-            <div class="projects_left">
-                <div class="imagen_position">
-                    <img class="cuatro" src="/Imagenes/cluster.jpg">
-                    <div class="tecnologias">
-                        <div class="tec_used">Data Scince</div>
-                        <div class="tec_used">Machine learning</div>
-                        <div class="tec_used">Python</div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="projects_right">
-                <div class="projects_right_title animate__animated  animate__fadeInRight">
-                    Clustering of the Agricultural <br>
-                    Sector of Peru
-                </div>
-                <div class="projects_right_text animate__animated animate__fadeIn">
-                    Data science project, using Machine Learning, to segment the agricultural sector using
-                    clustering algorithms.
-                </div>
-                <a class="vermas animate__animated animate__backInUp"
-                    href="https://app.powerbi.com/groups/me/reports/486d94b4-20dc-42ec-b3ba-3a9b58928c96/ReportSection70e899a2b85642dfda78?experience=power-bi">
-                    <p>See More</p>
-                    <div class="flecha">
-                        <img src="/Imagenes/flecha-correcta.png" alt="" title="Github">
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="tools_container animate__animated animate__fadeInLeft">
-            <div class="container_tools">
-                <div class="project_tool">
-                    <div class="icon">
-                        <img src="/Imagenes/diseno.png">
-                    </div>
-                    <h4>Design tools</h4>
-                    <p>Project in Django using libraries such as render, default_storage, matplotlib, CV2, using
-                        model
-                        view controller.</p>
-                </div>
-                <div class="project_tool">
-                    <div class="icon">
-                        <img src="/Imagenes/agrupacion.png">
-                    </div>
-                    <h4>Clustering</h4>
-                    <p>Project using machine learning, agglomerative hierarchical clustering algorithms, for
-                        dichotomous
-                        data and segmenting the Peruvian agricultural sector.</p>
-                </div>
-                <div class="project_tool">
-                    <div class="icon">
-                        <img src="/Imagenes/analisis.png">
-                    </div>
-                    <h4>Sport Statistic</h4>
-                    <p>Application that works with an API created with data from the Peruvian Soccer League,
-                        Express,
-                        Node js, React and SQL were used.</p>
-                </div>
-                <div class="project_tool">
-                    <div class="icon">
-                        <img src="/Imagenes/programacion-web.png">
-                    </div>
-                    <h4>Visual Estudio code Extension</h4>
-                    <p>This is a visual studio code extension available to download directly from VSC, this is a
-                        theme
-                        to facilitate programming and identify the components and structure of our code that we
-                        program.
+        <div class="frontendskills">
+            <div class="frontendskillsright">
+                <div class="frontendskillsrightbox">
+                    <h4>Programming languages</h4>
+                    <p>Mastery of languages ​​such as Python, Java, JavaScript (Node.js), PHP, or Ruby for the development of business logic and server-side functionalities.
                     </p>
                 </div>
+                <div class="frontendskillsrightbox">
+                    <h4>Databases</h4>
+                    <p>Experience designing, implementing, and administering relational (such as MySQL, PostgreSQL) or non-relational (such as MongoDB) databases to store and manage application data.</p>
+                </div>
+                <div class="frontendskillsrightbox">
+                    <h4>Frameworks</h4>
+                    <p>Use frameworks such as Django (Python), Spring (Java), Express.js (Node.js), Laravel (PHP), or Ruby on Rails (Ruby) to speed up development and provide structure to backend code.</p>
+                </div>
+                <div class="frontendskillsrightbox">
+                    <h4>APIs and Web Services</h4>
+                    <p>Creation of RESTful or GraphQL APIs to allow communication between the frontend and the backend, as well as integration with external services via HTTP.</p>
+                </div>
+            </div>
+            <div class="frontendskillsleft">
+                <h2>Back End Skills</h2>
+                <h3>I am a backend developer with experience in building robust and scalable systems that drive the functionality of web applications. My skills include
+                </h3>
             </div>
         </div>
     </section>
-    <section class="contact" id="contact">
-        <div class="fondo">
+    <section class="projects" id="projects">
+        <div class="projectscontainers">
+            <div class="projectscontainerstop">
+                <h2>Projects</h2>
+                <hr class="solid">
+                <p>In my portfolio you will find a variety of projects that represent my experience and skills in software development. Each project was conceived with a focus on innovation, code quality, and customer satisfaction. Highlights include:</p>
+            </div>
+            <div class="projectscontainersbottom">
+                <div class="projectscontainersbottombox imagenunoproject">
+                    <div class="projectscontainersbottomboxinside positionbottomdos" style="background-color: #FF4858;">
+                        <h3>Sports Statistics</h3>
+                        <p>
+                            Application of sports analysis of the Peruvian League 1 from 2018 to 2023, information on
+                            matches and probabilities of results, variety of results and comparison of performance
+                            between
+                            teams
+                        </p>
+                        <button class="seewebsite" onclick="https://ninobarrios.github.io/Analisis_Deportivo/">Visit
+                            Web</button>
+                    </div>
+                </div>
+                <div class="projectscontainersbottombox imagendosproject">
+                    <div class="projectscontainersbottomboxinside positionbottom" style="background-color: #F2A71B;">
+                        <h3>VSC Extension</h3>
+                        <p>
+                            Visual Studio Code theme extension, with contrast for labels, comments, variables and many
+                            more
+                            for better observation when spending long hours programming
+                        </p>
+                        <button class="seewebsite"
+                            onclick="window.open('https://marketplace.visualstudio.com/items?itemName=tema-dinamico.theme-extensions&ssr=false#overview', '_blank')">Visit
+                            Web</button>
+                    </div>
+                </div>
 
+                <div class="projectscontainersbottombox imagentresproject">
+                    <div class="projectscontainersbottomboxinside positionbottomdos" style="background-color: #400036;">
+                        <h3>Design Kit</h3>
+                        <p>
+                            Program created in Django with functions to improve the quality of an image, remove the
+                            background from images and create color palettes using the images we want as input.
+                        </p>
+                        <button class="seewebsite"
+                            onclick="window.open('https://github.com/ninobarrios/Kitdise-o')">Visit Web</button>
+
+                    </div>
+                </div>
+                <div class="projectscontainersbottombox imagencuatroproject">
+                    <div class="projectscontainersbottomboxinside positionbottom" style="background-color: #D8C2B5;">
+                        <h3>Data Science</h3>
+                        <p>
+                            Data science project, using Machine Learning, to segment the agricultural sector using
+                            clustering algorithms.
+                        </p>
+                        <button class="seewebsite"
+                            onclick="window.open('https://app.powerbi.com/groups/me/reports/486d94b4-20dc-42ec-b3ba-3a9b58928c96/ReportSection70e899a2b85642dfda78?experience=power-bi&noSignUpCheck=1')">Visit
+                            Web</button>
+
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
+
+    <div class="toolsused">
+        <h3>Technologies Used</h3>
+        <p>This section shows the technologies used in the development of the applications, both front end, back end,
+            database and data science integrated for the development of the projects.</p>
+    </div>
+    <div class="toolsudesbox">
+        <div class="toolsudesboxcontainer">
+            <div class="toolsudesboxcontainerfill">
+                <div class="toolsudesboxcontainerfillimagen">
+                    <img src="./Imagenes/diseno.png" alt="">
+                </div>
+                <div class="toolsudesboxcontainerfilltitle">
+                    <h3>Design Tools</h3>
+                </div>
+                <p>Project in Django using libraries such as render, default_storage, matplotlib, CV2, using
+                    model
+                    view controller.</p>
+            </div>
+            <div class="toolsudesboxcontainerfill">
+                <div class="toolsudesboxcontainerfillimagen">
+                    <img src="./Imagenes/agrupacion.png" alt="">
+                </div>
+                <div class="toolsudesboxcontainerfilltitle">
+                    <h3>Clustering</h3>
+                </div>
+                <p>Project using machine learning, agglomerative hierarchical clustering algorithms, for
+                    dichotomous
+                    data and segmenting the Peruvian agricultural sector.</p>
+            </div>
+            <div class="toolsudesboxcontainerfill">
+                <div class="toolsudesboxcontainerfillimagen">
+                    <img src="./Imagenes/analisis.png" alt="">
+                </div>
+                <div class="toolsudesboxcontainerfilltitle">
+                    <h3>Sport Statistic</h3>
+                </div>
+                <p>Application that works with an API created with data from the Peruvian Soccer League,
+                    Express,
+                    Node js, React and SQL were used.</p>
+            </div>
+            <div class="toolsudesboxcontainerfill">
+                <div class="toolsudesboxcontainerfillimagen">
+                    <img src="./Imagenes/programacion-web.png" alt="">
+                </div>
+                <div class="toolsudesboxcontainerfilltitle">
+                    <h3>Visual Estudio Code Extension</h3>
+                </div>
+                <p>This is a visual studio code extension available to download directly from VSC, this is a
+                    theme
+                    to facilitate programming and identify the components and structure of our code that we
+                    program.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <section class="contact" id="contact">
+        <h2 class="contacth2">Contact</h2>
         <div class="contact_info">
-            <h1 class="animate__animated animate__fadeInLeftBig">Contact Me</h1>
+            <div class="cardphoto">
+                <div class="foto">
+                    <img src="./Imagenes/nino queda.jpeg" alt="">
+
+                </div>
+                <h3>NINO BARRIOS</h3>
+                <h2>Web Devepoler </h2>
+            </div>
             <div class="button-container">
                 <form id="form">
                     <div class="field">
@@ -506,6 +389,9 @@
                     <input class="sendbtn" type="submit" id="button" value="Send Email">
                 </form>
             </div>
+
+
+
 
             <script type="text/javascript"
                 src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
