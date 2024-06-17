@@ -145,7 +145,6 @@ body {
 .imagen {
     height: 500px;
     width: 350px;
-    background-color: #FF4858;
     margin: 5px;
     display: flex;
     flex-direction: row;
@@ -198,6 +197,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
 
+
 }
 
 .aboutmedos {
@@ -206,6 +206,8 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+
+
 }
 
 .aboutmetres {
@@ -223,7 +225,8 @@ body {
     margin: 0px 7vw;
     background-color: #02031A;
 }
-.frontendskillsleft h3{
+
+.frontendskillsleft h3 {
     font-family: "Wix Madefor Text", sans-serif !important;
     font-size: 22px !important;
     width: 80%;
@@ -273,6 +276,9 @@ body {
     color: #f2cb05;
 }
 
+.frontendskillsrightbox p {
+    font-size: 14px;
+}
 
 
 
@@ -328,7 +334,7 @@ body {
     height: auto;
     overflow: hidden;
     background-color: #F29F05;
-    
+
 }
 
 .slider .slide-track {
@@ -458,7 +464,7 @@ hr.solid {
 .projectscontainerstop h2 {
     color: white;
     font-family: "Wix Madefor Text", sans-serif;
-    font-size: 50px ;
+    font-size: 50px;
 }
 
 .projectscontainerstop p {
@@ -491,7 +497,7 @@ hr.solid {
     background-color: #000000;
     width: 100%;
     height: 100%;
-    bottom: -230px;
+    bottom: -270px;
     border-radius: 25px 25px 0px 0px;
     transition: all 0.5s;
     color: white;
@@ -507,7 +513,7 @@ hr.solid {
 
 }
 
-.seewebsite{
+.seewebsite {
     width: 80%;
     height: 40px;
     background-color: gold;
@@ -517,11 +523,11 @@ hr.solid {
 
 
 .positionbottom {
-    bottom: -190px;
+    bottom: -270px;
 }
 
 .positionbottomdos {
-    bottom: -250px;
+    bottom: -270px;
 }
 
 .positionbottom:hover p {
@@ -559,20 +565,23 @@ hr.solid {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    
+
 }
+
 .imagendosproject {
     background-image: url('./Imagenes/vsc.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
+
 .imagentresproject {
     background-image: url('./Imagenes/diseño.JPG');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
+
 .imagencuatroproject {
     background-image: url('./Imagenes/cluster.jpg');
     background-size: cover;
@@ -1112,7 +1121,7 @@ form {
     align-items: center;
     height: 480px;
     width: 318px;
-    box-shadow: 7px 23px 90px -55px #02031A,0px 10px 15px -3px rgba(0,0,0,0.1),0px 10px 15px -3px rgba(0,0,0,0.1);
+    box-shadow: 7px 23px 90px -55px #02031A, 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -1129,13 +1138,13 @@ form {
     height: 480px;
     width: 318px;
     background-image: linear-gradient(to bottom, #f2cb05, #f3c000, #f3b500, #f3aa00, #f29f05);
-            margin-right: 5px;
+    margin-right: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     border-radius: 5px;
-    box-shadow: 7px 23px 90px -55px #02031A,0px 10px 15px -3px rgba(0,0,0,0.1),0px 10px 15px -3px rgba(0,0,0,0.1);
+    box-shadow: 7px 23px 90px -55px #02031A, 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
 .foto {
@@ -1456,43 +1465,185 @@ input[type="submit"] {
 
 
 @media (max-width: 1024px) {
-    .frontendskills{
-        padding: 100px 20px;
+    .frontendskills {
+        padding: 100px 2px;
+        width: 99vw;
+        margin: 0px 2.5vw;
+        font-size: 12px;
+        padding: 10px 0px;
+
+    }
+
+    .frontendskillsright {
+        width: 65%;
+    }
+
+    .frontendskills p {
+        width: 100%;
+    }
+
+    .frontendskillsleft {
+        width: 30%;
+    }
+
+    .projectscontainers {
         width: 95vw;
         margin: 0px 2.5vw;
     }
-    .projectscontainers{
+
+    .toolsudesboxcontainer {
         width: 95vw;
         margin: 0px 2.5vw;
     }
-    .toolsudesboxcontainer{
-        width: 95vw;
-        margin: 0px 2.5vw;
-    }
-    .toolsudesboxcontainerfillimagen{
+
+    .toolsudesboxcontainerfillimagen {
         margin-top: 0px;
+    }
+
+    .frontendskillsleft h3 {
+        width: 100%;
+    }
+
+    .toolsudesboxcontainerfill p {
+        margin: 15px 1%;
+        width: 99%;
     }
 }
 
 @media (max-width: 768px) {
-    .contact-btn{
+    .contact-btn {
         width: 200px;
         height: auto;
         font-size: 18px !important;
     }
-    .label2{
+
+    .label2 {
         font-size: 50px !important;
     }
-    .aboutmecontent{
+
+    .aboutmecontent {
         width: 90vw;
         margin: 0px 5vw;
     }
-    .abutmetitulo{
+
+    .abutmetitulo {
         width: 100% !important;
         text-align: center !important;
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+
+    .aboutmetop {
+        flex-direction: column;
+    }
+
+    .imagenesaboutme {
+        height: auto;
+    }
+
+    .imagen {
+        margin-top: 5px;
+    }
+
+    .aboutmeuno,
+    .aboutmedos,
+    .aboutmetres {
+        margin-top: 5px !important;
+    }
+
+    .frontendskills {
+        flex-direction: column;
+    }
+
+    .skills {
+        padding: 20px 0px;
+    }
+
+    .frontendskillsleft {
+        width: 95% !important;
+        padding: 0px 2.5%;
+        text-align: center;
+    }
+
+    .frontendskillsright {
+        flex-direction: column;
+        width: 100%;
+        height: 700px;
+    }
+
+    .frontendskillsrightbox {
+        width: 90%;
+        height: auto;
+    }
+
+    .frontendskills {
+        height: auto;
+    }
+
+    .frontendskills {
+        height: auto;
+    }
+
+    .projectscontainerstop p {
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .projectscontainerstop {
+        padding: 5px 10px 3px 15px;
+    }
+
+    .solid {
+        margin: 2px 0px;
+    }
+
+    .projectscontainers {
+        height: auto;
+    }
+    .projectscontainersbottom{
+        flex-direction: column;
+    }
+.toolsused{
+    padding-bottom: 100px;
+}
+    .toolsused h3{
+        text-align: center;
+        font-size: 50px;
+    }
+    .toolsused p{
+        width: 75%;
+    }
+    .toolsudesbox{
+        height: 1050px;
+        padding: 20px 0px;
+    }
+    .toolsudesboxcontainerfill{
+        width: 90%;
+    }
+    .toolsudesboxcontainer{
+        height: auto;
+        flex-direction: column;
+    }
+    .toolsudesboxcontainerfillimagen img{
+        width: 100px;
+        height: auto;
+    }
+    .contacth2{
+        padding: 20px 0px;
+    }
+    .contact{
+        padding-top: 0px;
+    }
+    .contact_info{
+        flex-direction: column;
+    }
+    .cardphoto{
+        margin-bottom: 25px;
+    }
+    .button-container{
+        margin-left: 0px;
     }
 }
 
@@ -1535,3 +1686,8 @@ input[type="submit"] {
     position: relative;
     z-index: 999;
 }
+
+
+
+
+/*Animaciones*/
