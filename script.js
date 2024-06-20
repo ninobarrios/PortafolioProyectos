@@ -77,19 +77,187 @@ window.addEventListener('scroll', function () {
 
 
 
-// Ejemplo básico de IntersectionObserver para añadir una clase cuando el elemento es visible
-const aboutMeDiv = document.getElementById('aboutme');
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      aboutMeDiv.classList.add('visible');
-    }
-  });
-}, { threshold: 0.5 }); // Umbral del 50%
-
-observer.observe(aboutMeDiv);
 
 
+document.addEventListener("DOMContentLoaded", function() {
+    window.addEventListener('scroll', function() {
+        var titleElement = document.querySelector('.abutmetitulo');
+        var contentElement = document.querySelector('.aboutmecontent');
+        var titlePosition = titleElement.getBoundingClientRect();
+        var contentPosition = contentElement.getBoundingClientRect();
+
+        // Verifica si el título y el contenido están dentro de la ventana visible
+        if (titlePosition.top >= 0 && titlePosition.bottom <= window.innerHeight &&
+            contentPosition.top >= 0 && contentPosition.bottom <= window.innerHeight) {
+            titleElement.classList.add('show');
+            contentElement.classList.add('show');
+        }
+    });
+});
 
 
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    window.addEventListener('scroll', function() {
+        var elementos = document.querySelectorAll('.imagen');
+        
+        elementos.forEach(function(elemento, index) {
+            var position = elemento.getBoundingClientRect();
+
+            // Verifica si el elemento está dentro de la ventana visible
+            if (position.top >= 0 && position.bottom <= window.innerHeight) {
+                setTimeout(function() {
+                    elemento.classList.add('show');
+                }, index * 200); 
+            }
+        });
+    });
+});
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    window.addEventListener('scroll', function() {
+        var leftElement = document.querySelector('.frontendskillsleft');
+        var rightBoxes = document.querySelectorAll('.frontendskillsrightbox');
+        
+        var leftPosition = leftElement.getBoundingClientRect();
+        var firstBoxPosition = rightBoxes[0].getBoundingClientRect();
+
+        // Verifica si el elemento izquierdo y la primera caja de habilidades están dentro de la ventana visible
+        if (leftPosition.top >= 0 && leftPosition.bottom <= window.innerHeight &&
+            firstBoxPosition.top >= 0 && firstBoxPosition.bottom <= window.innerHeight) {
+            
+            // Añadir clase show al elemento izquierdo
+            leftElement.classList.add('show');
+            
+            // Añadir clase show a cada caja de habilidades con un retardo secuencial
+            rightBoxes.forEach(function(box, index) {
+                setTimeout(function() {
+                    box.classList.add('show');
+                }, index * 100); // Ajusta el retardo entre la aparición de cada elemento
+            });
+        }
+    });
+});
+document.addEventListener("DOMContentLoaded", function() {
+    window.addEventListener('scroll', function() {
+        var element = document.querySelector('.frontendskillsleft');
+        var position = element.getBoundingClientRect();
+
+        // Verifica si el elemento está dentro de la ventana visible
+        if (position.top >= 0 && position.bottom <= window.innerHeight) {
+            element.classList.add('animate');
+        } else {
+            element.classList.remove('animate');
+        }
+    });
+});
+document.addEventListener("DOMContentLoaded", function() {
+    window.addEventListener('scroll', function() {
+        var element = document.querySelector('.frontendskillsleft.dos');
+        var position = element.getBoundingClientRect();
+
+        // Verifica si el elemento está dentro de la ventana visible
+        if (position.top >= 0 && position.bottom <= window.innerHeight) {
+            element.classList.add('animate');
+        } else {
+            element.classList.remove('animate');
+        }
+    });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    window.addEventListener('scroll', function() {
+        var elements = document.querySelectorAll('.projectscontainersbottombox');
+        elements.forEach(function(element, index) {
+            var position = element.getBoundingClientRect();
+
+            // Verifica si el elemento está dentro de la ventana visible
+            if (position.top >= 0 && position.bottom <= window.innerHeight) {
+                element.classList.add('animate' + (index + 1));
+            } else {
+                element.classList.remove('animate' + (index + 1));
+            }
+        });
+    });
+});
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    window.addEventListener('scroll', function() {
+        var element = document.querySelector('.projectscontainerstop');
+        var position = element.getBoundingClientRect();
+
+        // Verifica si el elemento está dentro de la ventana visible
+        if (position.top >= 0 && position.bottom <= window.innerHeight) {
+            element.classList.add('animate');
+        } else {
+            element.classList.remove('animate');
+        }
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    window.addEventListener('scroll', function() {
+        var element = document.querySelector('.toolsused');
+        var position = element.getBoundingClientRect();
+
+        // Verifica si el elemento está dentro de la ventana visible
+        if (position.top >= 0 && position.bottom <= window.innerHeight) {
+            element.classList.add('animate');
+        } else {
+            element.classList.remove('animate');
+        }
+    });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    window.addEventListener('scroll', function() {
+        var elements = document.querySelectorAll('.dscontent');
+        var windowHeight = window.innerHeight;
+
+        elements.forEach(function(element, index) {
+            var position = element.getBoundingClientRect();
+
+            // Verifica si el elemento está dentro de la ventana visible
+            if (position.top < windowHeight && position.bottom >= 0) {
+                setTimeout(function() {
+                    element.classList.add('animate');
+                }, index * 200); // Retardo basado en el índice para que aparezcan uno a uno
+            }
+        });
+    });
+});
+
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    window.addEventListener('scroll', function() {
+        var cardPhoto = document.querySelector('.cardphoto');
+        var buttonContainer = document.querySelector('.button-container');
+        var windowHeight = window.innerHeight;
+
+        function checkVisibility(element) {
+            var position = element.getBoundingClientRect();
+            return (position.top < windowHeight && position.bottom >= 0);
+        }
+
+        if (checkVisibility(cardPhoto)) {
+            cardPhoto.classList.add('animate');
+        } else {
+            cardPhoto.classList.remove('animate');
+        }
+
+        if (checkVisibility(buttonContainer)) {
+            buttonContainer.classList.add('animate');
+        } else {
+            buttonContainer.classList.remove('animate');
+        }
+    });
+});
