@@ -590,7 +590,7 @@ hr.solid {
 
 
 .positionbottom {
-    bottom: -270px;
+    bottom: -220px;
 }
 
 .positionbottomdos {
@@ -650,7 +650,7 @@ hr.solid {
 }
 
 .imagencuatroproject {
-    background-image: url('./Imagenes/cluster.jpg');
+    background-image: url('./Imagenes/paleta.JPG');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
