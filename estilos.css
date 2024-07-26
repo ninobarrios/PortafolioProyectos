@@ -1672,9 +1672,9 @@ input[type="submit"] {
     .projectscontainersbottom{
         flex-direction: column;
     }
-.toolsused{
-    padding-bottom: 100px;
-}
+    .toolsused{
+        padding-bottom: 100px;
+    }
     .toolsused h3{
         text-align: center;
         font-size: 50px;
@@ -1711,6 +1711,12 @@ input[type="submit"] {
     }
     .button-container{
         margin-left: 0px;
+    }
+    .datascience{
+        flex-direction: column;
+    }
+    .dscontent {
+        width: auto !important;
     }
 }
 
