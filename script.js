@@ -353,12 +353,5 @@ document.addEventListener("DOMContentLoaded", function() {
 
     window.addEventListener('scroll', handleScroll);
 
-    // Elimina clases de animación al cambiar el tamaño de la ventana
-    window.addEventListener('resize', function() {
-        if (isMobileView()) {
-            document.querySelectorAll('.animate, .show').forEach(function(element) {
-                element.classList.remove('animate', 'show');
-            });
-        }
-    });
+    
 });
