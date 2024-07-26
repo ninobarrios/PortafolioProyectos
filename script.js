@@ -261,3 +261,124 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+function isMobileView() {
+    return window.innerWidth <= 768;
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    function handleScroll() {
+        if (isMobileView()) return;
+
+        var sections = document.querySelectorAll('section');
+
+        sections.forEach(function(section) {
+            var sectionTop = section.offsetTop;
+            var sectionHeight = section.clientHeight;
+            var scrollPosition = window.scrollY;
+
+            if (scrollPosition >= sectionTop && scrollPosition < (sectionTop + sectionHeight)) {
+                document.querySelectorAll('.navbar-nav .nav-link').forEach(function(link) {
+                    link.classList.remove('active');
+                });
+
+                var sectionId = section.getAttribute('id');
+                var correspondingLink = document.querySelector('.navbar-nav .nav-link[href="#' + sectionId + '"]');
+                if (correspondingLink) correspondingLink.classList.add('active');
+            }
+        });
+
+        var titleElement = document.querySelector('.abutmetitulo');
+        var contentElement = document.querySelector('.aboutmecontent');
+        var titlePosition = titleElement.getBoundingClientRect();
+        var contentPosition = contentElement.getBoundingClientRect();
+
+        if (titlePosition.top >= 0 && titlePosition.bottom <= window.innerHeight &&
+            contentPosition.top >= 0 && contentPosition.bottom <= window.innerHeight) {
+            titleElement.classList.add('show');
+            contentElement.classList.add('show');
+        }
+
+        var elementos = document.querySelectorAll('.imagen');
+        
+        elementos.forEach(function(elemento, index) {
+            var position = elemento.getBoundingClientRect();
+
+            if (position.top >= 0 && position.bottom <= window.innerHeight) {
+                setTimeout(function() {
+                    elemento.classList.add('show');
+                }, index * 200); 
+            }
+        });
+
+        var leftElement = document.querySelector('.frontendskillsleft');
+        var rightBoxes = document.querySelectorAll('.frontendskillsrightbox');
+        
+        var leftPosition = leftElement.getBoundingClientRect();
+        var firstBoxPosition = rightBoxes[0].getBoundingClientRect();
+
+        if (leftPosition.top >= 0 && leftPosition.bottom <= window.innerHeight &&
+            firstBoxPosition.top >= 0 && firstBoxPosition.bottom <= window.innerHeight) {
+            
+            leftElement.classList.add('show');
+            
+            rightBoxes.forEach(function(box, index) {
+                setTimeout(function() {
+                    box.classList.add('show');
+                }, index * 100);
+            });
+        }
+
+        var elements = document.querySelectorAll('.projectscontainersbottombox');
+        elements.forEach(function(element, index) {
+            var position = element.getBoundingClientRect();
+
+            if (position.top >= 0 && position.bottom <= window.innerHeight) {
+                element.classList.add('animate' + (index + 1));
+            } else {
+                element.classList.remove('animate' + (index + 1));
+            }
+        });
+
+        var elements = document.querySelectorAll('.dscontent');
+        elements.forEach(function(element, index) {
+            var position = element.getBoundingClientRect();
+
+            if (position.top < window.innerHeight && position.bottom >= 0) {
+                setTimeout(function() {
+                    element.classList.add('animate');
+                }, index * 200);
+            }
+        });
+
+        var cardPhoto = document.querySelector('.cardphoto');
+        var buttonContainer = document.querySelector('.button-container');
+
+        function checkVisibility(element) {
+            var position = element.getBoundingClientRect();
+            return (position.top < window.innerHeight && position.bottom >= 0);
+        }
+
+        if (checkVisibility(cardPhoto)) {
+            cardPhoto.classList.add('animate');
+        } else {
+            cardPhoto.classList.remove('animate');
+        }
+
+        if (checkVisibility(buttonContainer)) {
+            buttonContainer.classList.add('animate');
+        } else {
+            buttonContainer.classList.remove('animate');
+        }
+    }
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Elimina clases de animación al cambiar el tamaño de la ventana
+    window.addEventListener('resize', function() {
+        if (isMobileView()) {
+            document.querySelectorAll('.animate, .show').forEach(function(element) {
+                element.classList.remove('animate', 'show');
+            });
+        }
+    });
+});
