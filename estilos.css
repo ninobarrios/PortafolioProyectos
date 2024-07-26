@@ -1653,8 +1653,9 @@ input[type="submit"] {
 
     .frontendskillsleft {
         width: 95% !important;
-        padding: 0px 2.5%;
         text-align: center;
+        margin: 0px 2.5%;
+        padding: 0px;
     }
 
     .frontendskillsright {
@@ -1681,8 +1682,9 @@ input[type="submit"] {
 
     .projectscontainerstop p {
         width: 100%;
-        margin: 0px;
+        margin: 15px 0px;
         padding: 0px;
+
     }
 
     .projectscontainerstop {
