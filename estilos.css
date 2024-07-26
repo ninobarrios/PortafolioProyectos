@@ -510,7 +510,7 @@ body {
     margin: 50px 8vw;
     height: 700px;
     background-color: #bbbbbb4b;
-    border-radius: 30px;
+    border-radius: 10px;
     position: relative;
     overflow: hidden;
 }
@@ -1621,6 +1621,7 @@ input[type="submit"] {
 
     .frontendskills {
         flex-direction: column;
+        width: 100vw;
     }
 
     .skills {
