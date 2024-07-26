@@ -1637,6 +1637,9 @@ input[type="submit"] {
 
     .skills {
         padding: 20px 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .frontendskillsleft {
@@ -1648,7 +1651,7 @@ input[type="submit"] {
     .frontendskillsright {
         flex-direction: column;
         width: 100%;
-        height: 700px;
+        height: 800px;
     }
 
     .frontendskillsrightbox {
