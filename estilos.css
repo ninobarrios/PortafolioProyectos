@@ -1589,6 +1589,10 @@ input[type="submit"] {
         padding: 0px;
         overflow-x: hidden;
     }
+    .portada_content{
+        width: 95vw;
+        margin: 0px;
+    }
     .projectscontainersbottombox {
         width: 80%;
     }
