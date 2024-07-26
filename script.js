@@ -149,9 +149,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // Verifica si el elemento está dentro de la ventana visible
         if (position.top >= 0 && position.bottom <= window.innerHeight) {
             element.classList.add('animate');
-        } else {
-            element.classList.remove('animate');
-        }
+        } 
     });
 });
 document.addEventListener("DOMContentLoaded", function() {
@@ -162,9 +160,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // Verifica si el elemento está dentro de la ventana visible
         if (position.top >= 0 && position.bottom <= window.innerHeight) {
             element.classList.add('animate');
-        } else {
-            element.classList.remove('animate');
-        }
+        } 
     });
 });
 
@@ -178,9 +174,7 @@ document.addEventListener("DOMContentLoaded", function() {
             // Verifica si el elemento está dentro de la ventana visible
             if (position.top >= 0 && position.bottom <= window.innerHeight) {
                 element.classList.add('animate' + (index + 1));
-            } else {
-                element.classList.remove('animate' + (index + 1));
-            }
+            } 
         });
     });
 });
@@ -195,9 +189,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // Verifica si el elemento está dentro de la ventana visible
         if (position.top >= 0 && position.bottom <= window.innerHeight) {
             element.classList.add('animate');
-        } else {
-            element.classList.remove('animate');
-        }
+        } 
     });
 });
 
@@ -209,9 +201,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // Verifica si el elemento está dentro de la ventana visible
         if (position.top >= 0 && position.bottom <= window.innerHeight) {
             element.classList.add('animate');
-        } else {
-            element.classList.remove('animate');
-        }
+        } 
     });
 });
 
@@ -250,15 +240,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
         if (checkVisibility(cardPhoto)) {
             cardPhoto.classList.add('animate');
-        } else {
-            cardPhoto.classList.remove('animate');
-        }
+        } 
 
         if (checkVisibility(buttonContainer)) {
             buttonContainer.classList.add('animate');
-        } else {
-            buttonContainer.classList.remove('animate');
-        }
+        } 
     });
 });
 function isMobileView() {
@@ -334,9 +320,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
             if (position.top >= 0 && position.bottom <= window.innerHeight) {
                 element.classList.add('animate' + (index + 1));
-            } else {
-                element.classList.remove('animate' + (index + 1));
-            }
+            } 
         });
 
         var elements = document.querySelectorAll('.dscontent');
@@ -360,15 +344,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
         if (checkVisibility(cardPhoto)) {
             cardPhoto.classList.add('animate');
-        } else {
-            cardPhoto.classList.remove('animate');
-        }
+        } 
 
         if (checkVisibility(buttonContainer)) {
             buttonContainer.classList.add('animate');
-        } else {
-            buttonContainer.classList.remove('animate');
-        }
+        } 
     }
 
     window.addEventListener('scroll', handleScroll);
