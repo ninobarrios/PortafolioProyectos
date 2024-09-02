@@ -71,9 +71,12 @@ window.addEventListener('scroll', function () {
 
 
 
-
-
-
+document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(() => {
+        document.querySelector('.preloader').classList.add('hide');
+        document.querySelector('.content').classList.add('show');
+    }, 6000); 
+});
 
 
 

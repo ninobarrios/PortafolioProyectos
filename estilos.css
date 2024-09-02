@@ -7,10 +7,176 @@ body {
     z-index: -1;
     overflow-x: hidden;
     max-width: 100vw;
+    font-family: "Raleway", sans-serif;
+
 }
 *, *::before, *::after {
     box-sizing: border-box;
 }
+/*Precarga*/
+/* Estilo general del preloader */
+.preloader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    background-color: #181c27; /* Fondo negro para el preloader */
+    z-index: 9999; /* Asegura que el preloader esté sobre el contenido principal */
+    transition: opacity 1s ease-out; /* Transición de opacidad del preloader */
+}
+
+/* Estilo de los elementos de entrada (nombres) */
+.entrada {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.name {
+    font-family: "Raleway", sans-serif;
+    font-size: 30px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideIn 1s forwards, slideOut 1s forwards;
+    margin: 0 10px;
+    color: aliceblue;
+}
+
+.name:nth-child(1) {
+    animation-delay: 0.5s, 2.5s; 
+}
+
+.name:nth-child(2) {
+    animation-delay: 1s, 2.5s; 
+}
+
+.name:nth-child(3) {
+    animation-delay: 1.5s, 2.5s; 
+}
+/**/
+/* Estilo de la entrada del nombre */
+.entradanombre {
+    opacity: 0;
+    animation: fadeIn 3s forwards, growAndShrink 2s forwards;
+    animation-delay: 3s;
+    position: absolute;
+    color: #181c27;
+    font-size: 20px;
+    font-family: "Raleway", sans-serif;
+    text-align: center; 
+    height: 50px;
+    width: 0; 
+    background-color: #ffffff;
+    border-radius: 50px;
+    display: flex;
+    text-align: center;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Animación para el crecimiento y reducción del ancho */
+@keyframes growAndShrink {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 200px; 
+    }
+    100% {
+        background-color: #181c27;
+        color: #ffffff;
+        width: 200px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+
+.content {
+ opacity: 0; 
+    transition: opacity 1s ease-in, background-color 1s ease-in; /* Transición de opacidad y color */
+}
+
+/* Animación para el deslizamiento hacia arriba */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animación para el deslizamiento hacia afuera */
+@keyframes slideOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+/* Animación para hacer el desvanecimiento (entrada) */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animación para hacer el desvanecimiento (salida) */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/* Estilo para mostrar el contenido principal después del preloader */
+.preloader.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.content.show {
+    opacity: 1; /* Mostrar el contenido */
+}
+
+
+/*Fin preloader*/
+
+
 
 
 .portada {
@@ -25,11 +191,9 @@ body {
 
 .portada_content {
     position: relative;
-    height: 80vh;
-    width: 90vw;
-    margin: 50px;
-    background-image: url('https://media.admagazine.com/photos/618a64e1cc7069ed5077c7ed/master/w_1600%2Cc_limit/75764.jpg');
-    /* Reemplaza 'ruta_de_la_imagen.jpg' con la URL de tu imagen de fondo */
+    height: 100vh;
+    width: 100vw;
+    background-image: url('./Imagenes/nino.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -38,15 +202,18 @@ body {
     align-items: center;
 }
 
-.portada_content::before {
+.portada_content::after {
     content: "";
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.719);
+    height: 50%; /* Ajusta el valor según la altura del degradado que desees */
+    background: linear-gradient(to bottom, transparent, #181c27);
+    pointer-events: none; /* Permite que los eventos del ratón pasen a través del degradado */
 }
+
+
 
 
 .portada_info {
@@ -58,7 +225,7 @@ body {
 
 
 .label1 {
-    font-family: "Wix Madefor Text", sans-serif;
+    font-family: "Raleway", sans-serif;
     font-size: 16px !important;
     letter-spacing: 8px;
     margin-bottom: 20px !important;
@@ -68,10 +235,15 @@ body {
     position: relative;
     z-index: 5;
     text-align: center;
+    color: #ffffff;
+    animation-delay: 5.5s;
+    font-weight: bold;
+    line-height: 0.5;
 }
 
 .label2 {
-    font-family: "Fraunces", serif;
+    font-family: "Raleway", sans-serif;
+
     font-size: 99px !important;
     line-height: 1.5;
     display: flex;
@@ -80,23 +252,28 @@ body {
     position: relative;
     z-index: 5;
     text-align: center;
+    color: #ffffff;
+    animation-delay: 5.5s;
+
 }
 
 .portada_info button {
     font-size: 1vw;
-    background-color: #ffb703;
     color: white;
     padding: 10px 20px;
     margin-top: 20px;
     position: relative;
     z-index: 999;
-    border: none;
-    font-family: "Wix Madefor Text", sans-serif;
+    animation-delay: 5.5s;
+    font-family: "Raleway", sans-serif;
+    border: 2px solid #44afb9;
+    background-color: #00000000;
+    border-radius: 10px;
 
 }
 
 .portada_info button:hover {
-    transform: scale(1.2);
+    background-color: #44afb9;
 }
 
 
@@ -107,10 +284,11 @@ body {
     color: white;
     position: relative;
     padding-top: 50px;
+    background-color: #181c27;
 }
 
 .abutmetitulo {
-    font-family: "Wix Madefor Text", sans-serif;
+    font-family: "Raleway", sans-serif;
     text-align: center;
     font-size: 50px;
     width: 100%;
@@ -122,7 +300,7 @@ body {
     text-align: center;
     margin: 0px 30vw;
     font-size: 20px;
-    font-family: "Wix Madefor Text", sans-serif;
+    font-family: "Raleway", sans-serif;
 
 }
 .abutmetitulo, .aboutmecontent {
@@ -146,6 +324,7 @@ body {
     height: 40%;
     display: flex;
     justify-content: center;
+    background-color: #181c27;
 }
 
 .aboutmebottom {
@@ -165,7 +344,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: "Wix Madefor Text", sans-serif;
+    font-family: "Raleway", sans-serif;
     position: relative;
     filter: brightness();
 }
@@ -187,7 +366,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.678);
+    background-color:#181c27bb;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
     z-index: 1;
@@ -246,13 +425,14 @@ body {
     padding: 100px;
     display: flex;
     margin: 0px 7vw;
-    background-color: #02031A;
+    background-color: #181c27;
 }
 
 .frontendskillsleft h3 {
-    font-family: "Wix Madefor Text", sans-serif !important;
+    font-family: "Raleway", sans-serif;
     font-size: 22px !important;
     width: 80%;
+    font-weight: 200;
 
 }
 
@@ -266,7 +446,7 @@ body {
 }
 
 .frontendskillsleft h2 {
-    font-family: "Wix Madefor Text", sans-serif;
+    font-family: "Raleway", sans-serif;
     font-size: 50px !important;
     padding-top: 20px;
 }
@@ -336,23 +516,25 @@ body {
     display: flex;
     flex-direction: column;
     color: white;
-    border: 1px solid #2e2d2c;
+    border: 1px solid #4d4c4c;
 
 }
 
 .frontendskillsrightbox h4 {
-    color: #f2cb05;
+    color: #57cad1;
+    font-family: "Raleway", sans-serif;
+
 }
 
 .frontendskillsrightbox p {
     font-size: 14px;
     font-family: "Raleway", sans-serif;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .frontendskillsrightbox:hover {
     background-image: linear-gradient(to right top, #000000,#000000);
-    border: 2px solid #f3aa00;
+    border: 2px solid #57cad1;
 }
 
 
@@ -381,7 +563,7 @@ body {
 }
 
 .skills {
-    background-color: #060608;
+    background-color: #181c27;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -393,7 +575,7 @@ body {
     font-size: 4vw;
     color: #00FFFF;
     text-shadow: 0px 1px 5px rgb(0, 255, 255);
-    font-family: "Roboto", sans-serif;
+    font-family: "Raleway", sans-serif;
     font-weight: bold;
     display: flex;
     justify-content: flex-end;
@@ -406,7 +588,7 @@ body {
     width: 100vw;
     height: auto;
     overflow: hidden;
-    background-color: #F29F05;
+    background-color: #0f3f53;
 
 }
 
@@ -468,7 +650,7 @@ body {
     width: 100vw;
     padding: 0px;
     color: rgba(0, 255, 255, 1);
-    font-family: "Bellota", system-ui;
+    font-family: "Raleway", sans-serif;
     font-weight: bold;
     font-size: 4vw;
     flex-direction: column;
@@ -480,7 +662,7 @@ body {
 .center h1 {
     color: #00FFFF;
     text-shadow: 0px 1px 5px rgb(0, 255, 255);
-    font-family: "Roboto", sans-serif;
+    font-family: "Raleway", sans-serif;
     font-size: 4vw;
 
     font-weight: bold;
@@ -524,8 +706,10 @@ body {
 .projectscontainerstop {
     width: 100%;
     height: 30%;
-    background-color: #02031A;
+    background-color: #0f3f53;
     padding: 25px 40px;
+    font-family: "Raleway", sans-serif;
+
 }
 
 
@@ -536,7 +720,7 @@ hr.solid {
 
 .projectscontainerstop h2 {
     color: white;
-    font-family: "Wix Madefor Text", sans-serif;
+    font-family: "Raleway", sans-serif;
     font-size: 50px;
 }
 
@@ -551,19 +735,19 @@ hr.solid {
     justify-content: center;
     align-items: center;
     justify-content: space-evenly;
-
+    background-color: #192c3b;
 }
 
 .projectscontainersbottombox {
     height: 335px;
-    width: 257px;
+    width: 335px;
     background-color: #ffffff;
     margin: 50px 0px;
     display: flex;
     border-radius: 5px 5px 0px 0px;
     position: relative;
     overflow: hidden;
-}
+    box-shadow: 11px 10px 12px 8px rgba(0,0,0,0.1);}
 
 .projectscontainersbottomboxinside {
     position: absolute;
@@ -575,21 +759,20 @@ hr.solid {
     transition: all 0.5s;
     color: white;
     padding: 15px;
-    font-family: "Wix Madefor Text", sans-serif !important;
-    text-align: justify;
+    font-family: "Raleway", sans-serif;
 
 }
 
 .projectscontainersbottomboxinside p {
     opacity: 0;
-    font-family: "Wix Madefor Text", sans-serif !important;
+    font-family: "Raleway", sans-serif;
 
 }
 
 .seewebsite {
     width: 80%;
     height: 40px;
-    background-color: gold;
+    background-color: #57cad1;
     margin: 0px 10%;
     border: none;
     color: #000000;
@@ -674,13 +857,15 @@ hr.solid {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    font-family: "Raleway", sans-serif;
+
 }
 
 .toolsused h3 {
     font-size: 76px;
     font-weight: bold;
 
-    font-family: "Wix Madefor Text", sans-serif !important;
+    font-family: "Raleway", sans-serif;
 }
 
 .toolsused p {
@@ -692,7 +877,7 @@ hr.solid {
     width: 100vw;
     height: 600px;
 
-    background-color: #edeff1;
+    background-color: #1a212c;
     position: relative;
 }
 
@@ -717,6 +902,8 @@ hr.solid {
     display: flex;
     position: relative;
     flex-direction: column;
+    font-family: "Raleway", sans-serif;
+
 }
 
 .toolsudesboxcontainerfillimagen {
@@ -739,7 +926,7 @@ hr.solid {
 }
 
 .toolsudesboxcontainerfilltitle h3 {
-    font-family: "Wix Madefor Text", sans-serif !important;
+    font-family: "Raleway", sans-serif;
 }
 
 .toolsudesboxcontainerfill p {
@@ -802,7 +989,7 @@ hr.solid {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: "Bellota", system-ui;
+    font-family: "Raleway", sans-serif;
     font-size: 15px;
 
 }
@@ -902,7 +1089,7 @@ hr.solid {
     display: flex;
     background-color: transparent;
     color: #ffffff;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: "Raleway", sans-serif;
     height: 30px;
     backdrop-filter: blur(5px);
     margin: 10px;
@@ -945,7 +1132,7 @@ hr.solid {
 .projects_right_title {
     font-size: 2.5vw;
     color: #00FFFF;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Raleway", sans-serif;
     font-weight: 500;
     margin-left: 100px;
     line-height: 1;
@@ -956,7 +1143,7 @@ hr.solid {
     margin-left: 100px;
     font-size: 1.2vw;
     color: #ffffff;
-    font-family: "Bellota", system-ui;
+    font-family: "Raleway", sans-serif;
     font-weight: bold;
     display: flex;
     justify-content: center;
@@ -976,7 +1163,7 @@ hr.solid {
     border-radius: 50px;
     justify-content: space-between;
     text-decoration: none;
-    font-family: "Kanit", sans-serif;
+    font-family: "Raleway", sans-serif;
     font-weight: bold;
     color: black;
     position: relative;
@@ -1054,7 +1241,7 @@ hr.solid {
 
 .project_tool h4 {
     font-size: 25px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Raleway", sans-serif;
     margin: 20px;
     color: white;
 }
@@ -1064,7 +1251,7 @@ hr.solid {
     text-align: center;
     margin: 0px;
     color: white;
-    font-family: "Bellota", system-ui;
+    font-family: "Raleway", sans-serif;
 
 }
 
@@ -1120,7 +1307,7 @@ hr.solid {
 .contact_info h1 {
     color: #00FFFF;
     text-shadow: 0px 1px 5px rgb(0, 255, 255);
-    font-family: "Roboto", sans-serif;
+    font-family: "Raleway", sans-serif;
     font-size: 4vw;
 
     font-weight: bold;
@@ -1163,8 +1350,7 @@ hr.solid {
     text-align: center;
     margin: 0px;
     font-size: 80px;
-    font-weight: bold;
-    font-family: "Wix Madefor Text", sans-serif;
+    font-family: "Raleway", sans-serif;
 
 }
 
@@ -1211,9 +1397,8 @@ form {
 .cardphoto {
     height: 480px;
     width: 318px;
-    background-image: linear-gradient(to bottom, #f2cb05, #f3c000, #f3b500, #f3aa00, #f29f05);
-    margin-right: 5px;
-    display: flex;
+    background-image: linear-gradient(to right bottom, #1f5b73, #236a81, #29798f, #2f899c, #3799a9, #3793a4, #388ea0, #38889b, #336c81, #2e5165, #263848, #1a212c);
+        display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -1244,7 +1429,7 @@ form {
 .cardphoto h2 {
     text-align: center;
     color: #02031A;
-    font-family: "Wix Madefor Text", sans-serif;
+    font-family: "Raleway", sans-serif;
     font-weight: bold;
     font-size: 40px;
 
@@ -1254,7 +1439,7 @@ form {
     margin-top: 15px;
     text-align: center;
     color: #ffffff;
-    font-family: "Wix Madefor Text", sans-serif;
+    font-family: "Raleway", sans-serif;
     font-size: 30px;
     font-weight: bold;
 }
@@ -1282,7 +1467,7 @@ form {
 .sendbtn {
     background-color: #00ffff;
     color: #000000;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: "Raleway", sans-serif;
     height: 40px;
     width: auto;
     margin: 10px;
@@ -1314,6 +1499,8 @@ textarea {
     padding: 10px;
     box-sizing: border-box;
     max-height: 110px;
+    font-family: "Raleway", sans-serif;
+
 }
 
 textarea:focus {
@@ -1326,7 +1513,7 @@ textarea:focus {
 .footer {
     width: 100%;
     height: 20vh;
-    background-color: #02031A;
+    background-color: #1a212c;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1352,7 +1539,7 @@ textarea:focus {
 
 .name_footer {
     margin-bottom: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Raleway", sans-serif;
     font-size: 15px;
     color: rgba(255, 255, 255, 0.671);
 }
@@ -1361,6 +1548,8 @@ textarea:focus {
     margin: 10px 0px;
     position: relative;
     z-index: 908;
+    font-family: "Raleway", sans-serif;
+
 }
 
 .field label {
@@ -1369,7 +1558,7 @@ textarea:focus {
     color: #ffffff;
     font-size: 16px;
     margin-bottom: 5px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Raleway", sans-serif;
 }
 
 .field input {
@@ -1382,7 +1571,7 @@ textarea:focus {
     height: 25px;
     color: white;
     margin: 0px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Raleway", sans-serif;
     height: 30px;
     width: 90%;
 }
@@ -1401,9 +1590,9 @@ textarea:focus {
 
 
 input[type="submit"] {
-    background-color: #f2cb05;
+    background-color: #57cad1;
     color: #000000;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: "Raleway", sans-serif;
     height: 40px;
     width: auto;
     margin: 10px;
@@ -1593,8 +1782,30 @@ input[type="submit"] {
         padding: 0px;
         overflow-x: hidden;
     }
-    .portada_content{
+    .entrada{
+        flex-direction: column;
+        text-align: center;
+    }
+    .name{
+        display: flex;
+        margin: 0px !important;
+        padding: 0px;
+        text-align: center;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+    .label1 {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    .label2{
+        text-align: center;
         width: 95vw;
+        margin: 0px 2.5vw;
+    }
+    .portada_content{
+        width: 100vw;
         margin: 0px;
     }
     .projectscontainersbottombox {
@@ -1604,6 +1815,7 @@ input[type="submit"] {
         width: 200px;
         height: auto;
         font-size: 18px !important;
+        background-color: #57cad1;
     }
 
     .label2 {
@@ -1759,7 +1971,7 @@ input[type="submit"] {
     color: white;
     position: absolute;
     z-index: 999;
-    background-color: #02031A;
+    background-color: #02031a00;
 
 }
 
@@ -1784,13 +1996,13 @@ input[type="submit"] {
 
 .nav-item {
     color: white !important;
-    font-family: "Wix Madefor Text", sans-serif;
+    font-family: "Raleway", sans-serif;
     position: relative;
     z-index: 999;
 }
 
 .navbar-nav .nav-link.active {
-    color: #ffb703 !important;
+    color: #57cad1 !important;
     position: relative;
     z-index: 999;
 }
@@ -1803,12 +2015,14 @@ input[type="submit"] {
     flex-direction: column;
     padding: 60px;
     text-align: center;
+    font-family: "Raleway", sans-serif;
+    background-color: #1a212c;
+
 
 }
 .datasciencecontainer h3{
     color: white;
     color: white;
-    font-family: "Wix Madefor Text", sans-serif;
     font-size: 50px;
     text-align: center;
 }
@@ -1833,6 +2047,8 @@ input[type="submit"] {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    font-family: "Raleway", sans-serif;
+
 }
 .dscontent img{
     width: 100%;
