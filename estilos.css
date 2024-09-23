@@ -730,12 +730,13 @@ hr.solid {
 }
 
 .projectscontainersbottom {
-    height: 55%;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     justify-content: space-evenly;
     background-color: #192c3b;
+    flex-wrap: wrap;
 }
 
 .projectscontainersbottombox {
@@ -846,7 +847,12 @@ hr.solid {
     background-position: center;
 }
 
-
+.imagencincoproject {
+    background-image: url('./Imagenes/porcentaje.JPG');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 
 .toolsused {
     width: 100vw;
@@ -2090,7 +2096,11 @@ input[type="submit"] {
     transform: translateY(0);
     transition-delay: 0.3s; /* Retraso de animación para el cuarto elemento */
 }
-
+.projectscontainersbottombox.animate5 {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.3s; /* Retraso de animación para el cuarto elemento */
+}
 
 .projectscontainerstop {
     opacity: 0;
